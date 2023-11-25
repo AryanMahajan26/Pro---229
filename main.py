@@ -2,10 +2,10 @@ import hashlib
 from itertools import permutations
 
 def find_hash(original_hash):
-    word_file = open("words.txt","r")
+    word_file = open("p229-main\words.txt","r")
     word_file = list(word_file)
 
-    anagram = "the oil pinky"
+    anagram = "i move lads"
     words = anagram.count(' ')
     words += 1
 
@@ -40,6 +40,6 @@ def find_hash(original_hash):
         if word_hash == original_hash:
             return hash_elem
 
-hash = '13b382e1a2f8e22535b4730d78bc8591'
+hash = 'ac3751fa101668c6de2002356d9a032b'
 answer = find_hash(hash)
 print(f"Collision!  The word corresponding to the given hash is '{answer}'")
